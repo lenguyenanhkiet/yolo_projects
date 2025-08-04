@@ -1,0 +1,12 @@
+names:
+- max_30
+- min_30
+- stop
+- traffic-light
+- turn_left
+- turn_right
+nc: 6
+path: data
+test: images/test
+train: images/train
+val: images/val
