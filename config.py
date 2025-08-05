@@ -13,7 +13,7 @@ TEST_RATIO = 0.1
 
 OUTPUT_DIR = ROOT_DIR  # hoặc bạn có thể dùng Path("runs/train")
 MODEL_CONFIG = "yolov8n.yaml"
-EPOCHS = 5
+EPOCHS = 1
 IMG_SIZE = 640
 BATCH = 16
 DEVICE = "cpu"

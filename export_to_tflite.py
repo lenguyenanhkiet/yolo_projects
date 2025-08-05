@@ -2,8 +2,7 @@ import os
 from ultralytics import YOLO
 
 def export_to_tflite():
-    model_path = "runs/detect/yolo_train/weights/best.pt"
-    # model_path = YOLO("runs/detect/yolo_train/weights/best.pt")
+    model_path = "runs/train/result_train/weights/best.pt"
     # Kiểm tra file .pt có tồn tại không
     if not os.path.isfile(model_path):
         raise FileNotFoundError(f"❌ Không tìm thấy mô hình: {model_path}")
