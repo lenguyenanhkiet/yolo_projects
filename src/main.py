@@ -5,11 +5,17 @@ from src.predict_test import predict_test
 from src.export_to_tflite import export_to_tflite
 
 if __name__ == "__main__":
+    # Bước 1: Cập nhật dataset (lọc trùng, chia train/val/test, đổi tên, cập nhật nhãn)
     class_map = update_dataset_and_split()
-    create_data_yaml(class_map)
-    for name, index in class_map.items():
-        print(f"{index}: {name}")
 
+    # Bước 2: Tạo file data.yaml cho YOLO
+    create_data_yaml(class_map)
+
+    # Bước 3: Huấn luyện
     train_and_eval()
+
+    # Bước 4: Dự đoán
     # predict_test()
-    export_to_tflite()
+
+    # Bước 5: Xuất sang TFLite
+    # export_to_tflite()
